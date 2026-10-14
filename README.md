@@ -34,7 +34,7 @@ Run the unit tests with `cd server && npm test`.
 
 ## Deploy to Render
 
-The `render.yaml` Blueprint builds the React client and serves it with the Express API as one web service. The app uses MongoDB Atlas for its production database.
+The `render.yaml` Blueprint builds the React client and serves it with the Express API as one web service. The build explicitly installs the client's development dependencies because Vite is required to create the production bundle. The app uses MongoDB Atlas for its production database.
 
 1. Push this project to a GitHub repository.
 2. Create a MongoDB Atlas cluster and a database user with a strong password. Add `0.0.0.0/0` under Atlas **Network Access** so Render can connect; restrict database permissions to the Zenflo database.
